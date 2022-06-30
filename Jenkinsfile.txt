@@ -49,6 +49,7 @@ pipeline {
 		}
 		//Code ends for stage Code Analysis
 
+
 		
 		
 		//Code starts for stage Unit Test
@@ -64,6 +65,18 @@ pipeline {
         }
 		//Code ends for stage Unit Test
 		
+		
+		//Code starts for stage Code Coverage
+		stage('Code Coverage') {
+            steps {
+               step([
+			$class:'JacocoPublisher'
+		])
+            }
+        }
+		//Code ends for stage Code Coverage
+
+
 
 	
 		// ******ALL CODE TO BE ADDED ABOVE THIS COMMENT******
