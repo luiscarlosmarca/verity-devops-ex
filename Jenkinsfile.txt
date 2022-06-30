@@ -39,7 +39,7 @@ pipeline {
 		stage('Code Analysis') {
 			    steps {
 					 script {
-						  scannerHome = tool 'sonar-scanner'
+						  scannerHome = tool 'sonar-scaner'
 						}
 						withSonarQubeEnv('MysonarQubeServer')
 							{
